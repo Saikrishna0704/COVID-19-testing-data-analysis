@@ -3,7 +3,7 @@
 This repository explores the COVID-19 time series testing data in the United States by John Hopkins University. 
 ## Data Source
 The data is accessed via an API end point 
-- `https://jhucoronavirus.azureedge.net/api/v1/testing/daily.json`
+- `https://jhucoronavirus.azureedge.net/api/v1/testing/daily.json`  
 More information and the original repository are available here  
 - `https://github.com/govex/COVID-19/tree/master/data_tables/testing_data`
 
