@@ -4,11 +4,11 @@ This repository explores the COVID-19 time series testing data in the United Sta
 ## Data Source
 The data is accessed via an API end point 
 - `https://jhucoronavirus.azureedge.net/api/v1/testing/daily.json`  
-More information and the original repository are available here: 
+More information and the original repository are available here  
 - `https://github.com/govex/COVID-19/tree/master/data_tables/testing_data`
 
 ## Files in this repository:  
-- **COVID_19_testing_data_analysis_JHU.ipynb** :
+- **COVID_19_testing_data_analysis_JHU.ipynb**  
   Jupyter notebook containing the code for data import, transformation, profiling, and visualization, with a focus on New York State.
   
 - **newyork_covid_testing_data.csv**  
@@ -61,6 +61,7 @@ A more meaningful approach for understanding testing intensity would be to:
 * Compute 7-day rolling averages on these daily values.
 
 Visualization  
+
 To visualize testing in New York, I created a time-series line chart of `tests_combined_total` over time:
 * X-axis: `date`
 * Y-axis: `tests_combined_total` (cumulative number of people tested)
