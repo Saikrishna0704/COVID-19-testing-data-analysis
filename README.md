@@ -31,10 +31,8 @@ The goals of this analyis are to:
   
 All work was done in Python using the pandas, requests, and matplotlib libraries.
 
-* Data Import and Profiling
-The data comes from Johns Hopkins University's COVID-19 testing dataset, available as a JSON API at:
-https://jhucoronavirus.azureedge.net/api/v1/testing/daily.json  
-I used the requests library to call this endpoint, downloaded the JSON, and converted it into a pandas DataFrame named testing_df.
+* Data Import and Profiling  
+I used the requests library to call the API endpoint, downloaded the JSON, and converted it into a pandas DataFrame named testing_df.
 
 To get a quick sense of the dataset and verify that it loaded correctly, I:
 * Displayed the first 5 and last 5 rows (head() and tail())
@@ -54,13 +52,11 @@ To analyze missing data, I calculated the percentage of null values per column f
 ## New York State Data  
 
 To focus on New York, I extracated the New York only data as newyork_covid_testing_data.csv
-I repeated basic profiling on New york data.  
-
-I then computed the simple arithmetic mean of `tests_combined_total` for New York. 
+I repeated basic profiling on New york data. I then computed the simple arithmetic mean of `tests_combined_total` for New York. 
 
 According to the data dictionary, `tests_combined_total` for New York is derived from `encounters_viral_total`, which represents the cumulative number of people tested via PCR or other approved nucleic acid amplification tests (NAAT). Because this is a cumulative measure, taking a plain average over the entire column is mathematically valid but not very intuitive as a “daily” metric. 
 
-A more meaningful approach for understanding testing intensity would be to:
+A more meaningful approach for understanding testing intensity would be to:  
 * Compute average new tests per day over the period. 
 * Compute 7-day rolling averages on these daily values.
 
@@ -70,8 +66,5 @@ To visualize testing in New York, I created a time-series line chart of `tests_c
 * Y-axis: `tests_combined_total` (cumulative number of people tested)
 * I also added a horizontal reference line at the average value
 
-In summary:
-The national JHU dataset covers almost two years of COVID-19 testing and includes states, DC, and U.S. territories.
-There is substantial missingness in several testing variables, but `tests_combined_total` is nearly complete and thus a strong candidate for analysis.
-For New York, the average of `tests_combined_total` (~33.8 million) reflects the typical magnitude of the cumulative total over the study period. 
+
 
