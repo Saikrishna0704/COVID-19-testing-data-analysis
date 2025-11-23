@@ -9,7 +9,7 @@ More information and the original repository are available here
 
 ## Files in this repository:  
 - **COVID_19_testing_data_analysis_JHU.ipynb**  
-  Jupyter notebook containing the code for data import, transformation, profiling, and visualization, with a focus on New York State.
+  Jupyter notebook containing the code for data import, profiling, manipulation and visualization, with a focus on New York State.
   
 - **newyork_covid_testing_data.csv**  
   Testing data filtered for New York State.
