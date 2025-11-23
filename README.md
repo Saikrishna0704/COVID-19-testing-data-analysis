@@ -24,10 +24,10 @@ More information and the original repository are available here
 ## Overview
 
 The goals of this analyis are to: 
-* Access and understand the national testing dataset
+* Access and understand the testing dataset
 * Export the New York only subset to a CSV
-* Compute an average metric for New York
-* Visualize the testing trend over time
+* Compute average of `tests_combined_total` for New York
+* Visualize the `tests_combined_total` trend over time
   
 All work was done in Python using the pandas, requests, and matplotlib libraries.
 
